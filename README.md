@@ -4,7 +4,7 @@ A photo-led personal page for GitHub Pages, with responsive navigation, work exp
 
 ## Edit
 
-- `index.html`: introduction, work experience, and photos.
+- `index.html`: education, work experience, and photos.
 - `style.css`: colors, spacing, and responsive layout.
 - `script.js`: navigation, scroll effects, gallery controls, and photo viewer.
 - `assets/`: original photos from Lab1 and the local Lucide icon library (ISC license).
