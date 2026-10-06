@@ -1,10 +1,10 @@
 # Personal website
 
-A photo-led personal page for GitHub Pages, with responsive navigation, experience highlights, and a photo gallery.
+A photo-led personal page for GitHub Pages, with responsive navigation, work experience, and a photo gallery.
 
 ## Edit
 
-- `index.html`: introduction, interests, projects, and links.
+- `index.html`: introduction, work experience, and photos.
 - `style.css`: colors, spacing, and responsive layout.
 - `script.js`: navigation, scroll effects, gallery controls, and photo viewer.
 - `assets/`: original photos from Lab1 and the local Lucide icon library (ISC license).

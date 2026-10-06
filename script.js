@@ -48,9 +48,9 @@ addEventListener('scroll', () => {
 addEventListener('resize', updateScroll);
 updateScroll();
 const slides = [
-  { src: 'assets/club.jpg', alt: '蔡加恩在東吳調酒社活動中示範調酒', category: 'PEOPLE & COMMUNITY', title: '社團裡的交流', description: '從活動與合作中，累積課堂之外的經驗。', position: 'center' },
-  { src: 'assets/work.jpg', alt: '蔡加恩在電腦教室與學員一同操作電腦', category: 'LEARNING TOGETHER', title: '一起學習的時刻', description: '把自己的理解，變成能一起討論的內容。', position: '42% center' },
-  { src: 'assets/bartending.jpg', alt: '蔡加恩在吧台前調酒', category: 'OFF THE SCREEN', title: '吧台前的專注', description: '調酒，也是觀察與練習的過程。', position: 'center' }
+  { src: 'assets/club.jpg', alt: '蔡加恩在東吳調酒社活動中示範調酒', category: 'CLUB', title: '東吳調酒社', description: '社團活動中的調酒示範。', position: 'center' },
+  { src: 'assets/work.jpg', alt: '蔡加恩在電腦教室與學員一同操作電腦', category: 'TEACHING', title: '程式教學', description: '在電腦教室協助學員操作。', position: 'center' },
+  { src: 'assets/bartending.jpg', alt: '蔡加恩在吧台前調酒', category: 'BARTENDING', title: '調酒', description: '吧台調酒紀錄。', position: 'center' }
 ];
 const gallery = document.querySelector('.gallery');
 const photo = document.querySelector('#gallery-photo');
