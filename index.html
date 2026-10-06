@@ -3,74 +3,105 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f8faf8">
   <meta name="description" content="蔡加恩的個人網站。資料科學背景，目前就讀台灣科技大學資訊管理碩士班，關注資料分析、AI 應用與流程自動化。">
-  <title>蔡加恩 | 個人網站</title>
+  <title>蔡加恩 | 學習、實作與生活</title>
   <link rel="stylesheet" href="style.css">
+  <script src="assets/lucide.min.js" defer></script>
+  <script src="script.js" defer></script>
 </head>
 <body>
+  <a class="skip-link" href="#about">跳至主要內容</a>
   <header class="site-header">
-    <a class="wordmark" href="#home">蔡加恩<span class="dot" aria-hidden="true"></span></a>
-    <nav aria-label="主選單">
-      <a href="#about">關於</a>
-      <a href="#experience">經歷</a>
-      <a href="#projects">作品</a>
-      <a href="#contact">聯絡</a>
-    </nav>
+    <div class="header-inner">
+      <a class="wordmark" href="#home">蔡加恩<span class="brand-dot" aria-hidden="true"></span><span class="brand-note">PERSONAL JOURNAL</span></a>
+      <button class="icon-button menu-toggle" aria-label="開啟選單" aria-expanded="false" aria-controls="main-nav" title="選單"><i data-lucide="menu"></i></button>
+      <nav id="main-nav" aria-label="主選單">
+        <a href="#about">關於我</a><a href="#experience">經歷</a><a href="#projects">專案</a><a href="#moments">生活片刻</a>
+      </nav>
+    </div>
+    <div class="reading-progress" aria-hidden="true"></div>
   </header>
-
-  <main id="home">
-    <section class="intro" aria-labelledby="intro-title">
-      <img class="avatar" src="https://github.com/datasciencefreshman2000.png?size=160" alt="我的 GitHub 頭像" width="80" height="80">
-      <p class="eyebrow">HELLO, WORLD</p>
-      <h1 id="intro-title">嗨，我是蔡加恩。</h1>
-      <p class="intro-copy">從資料科學出發，探索 AI 與資訊管理。<br>喜歡透過程式整理資料，也嘗試用技術解決實際問題。</p>
-      <a class="text-link" href="#about">認識我 <span aria-hidden="true">&darr;</span></a>
-    </section>
-
-    <section id="about" class="section" aria-labelledby="about-title">
-      <div class="section-label"><span>01</span><h2 id="about-title">關於我</h2></div>
-      <div class="section-content">
-        <p>目前就讀台灣科技大學資訊管理碩士班，<br>具有東吳大學資料科學學士班的學習背景。</p>
-        <p class="muted">關注資料分析、AI 應用與流程自動化，也有程式教學與社團活動的經驗。</p>
-        <dl class="details">
-          <div><dt>常用工具</dt><dd>Python、SQL、Google Apps Script</dd></div>
-          <div><dt>關注方向</dt><dd>資料分析、AI 應用、流程自動化</dd></div>
-        </dl>
-      </div>
-    </section>
-
-    <section id="experience" class="section" aria-labelledby="experience-title">
-      <div class="section-label"><span>02</span><h2 id="experience-title">經歷摘要</h2></div>
-      <div class="section-content">
-        <p>曾於研華科技擔任 AI 工程實習生，並有宇統資訊的 AI 工程實習經驗，參與 AI Agent 與資料分析相關開發。</p>
-        <p class="muted">曾教授 Python、資料分析與自動化課程，也曾參與青少年同儕與社會網絡相關研究。</p>
-      </div>
-    </section>
-
-    <!-- Add project links and descriptions here when ready. -->
-    <section id="projects" class="section projects" aria-labelledby="projects-title">
-      <div class="section-label"><span>03</span><h2 id="projects-title">專案選摘</h2></div>
-      <div class="section-content">
-        <div class="project-summary">
-          <h3 class="project-title">QuickScore</h3>
-          <p class="muted">參與共同創辦與開發法律申論題批改系統，嘗試將大型語言模型與檢索增強生成技術用於輔助批改。</p>
+  <main>
+    <section id="home" class="hero" aria-labelledby="hero-title">
+      <img class="hero-photo" src="assets/work.jpg" alt="蔡加恩在電腦教室與學員一同操作電腦" width="6000" height="4000" fetchpriority="high">
+      <div class="hero-shade" aria-hidden="true"></div>
+      <div class="hero-inner wrap">
+        <div class="hero-copy">
+          <p class="eyebrow light">DATA / TECHNOLOGY / EVERYDAY LIFE</p>
+          <h1 id="hero-title">蔡加恩<span>從好奇出發，<br>在實作中學習。</span></h1>
+          <p>資料科學背景，探索 AI 與資訊管理。<br>記錄一路上的學習、嘗試，還有生活。</p>
+          <a class="hero-link" href="#about">往下認識我 <i data-lucide="arrow-down"></i></a>
         </div>
-        <div class="project-summary">
-          <h3 class="project-title">社團流程自動化</h3>
-          <p class="muted">在東吳調酒社的營運中，運用 Google Apps Script 協助處理財務、活動報名與資料整理。</p>
+        <div class="hero-bottom"><span>台灣科技大學 / 資訊管理碩士班</span><span class="photo-note"><span class="small-dot"></span> 工作與教學的一刻</span></div>
+      </div>
+    </section>
+    <section id="about" class="about band">
+      <div class="wrap">
+        <div class="section-top reveal"><p class="eyebrow"><span>01</span> ABOUT ME</p><span class="section-aside">學習，是持續進行的事。</span></div>
+        <div class="about-grid">
+          <div class="reveal"><h2>把想法，<br>慢慢變成實際。</h2><p class="lead">你好，我是蔡加恩。</p><p>目前就讀台灣科技大學資訊管理碩士班，<br class="desktop-break">具有東吳大學資料科學學士班的學習背景。</p><p class="muted">關注資料分析、AI 應用與流程自動化。除了程式與資料，也喜歡教學、社團活動，以及調酒帶來的交流。</p><div class="tags"><span>資料分析</span><span>AI 應用</span><span>流程自動化</span></div></div>
+          <div class="about-details reveal">
+            <div class="detail-row"><span class="detail-icon"><i data-lucide="graduation-cap"></i></span><div><p class="detail-label">目前的學習</p><h3>台灣科技大學</h3><p>資訊管理碩士班</p></div></div>
+            <div class="detail-row"><span class="detail-icon"><i data-lucide="book-open"></i></span><div><p class="detail-label">資料科學背景</p><h3>東吳大學</h3><p>資料科學學士班</p></div></div>
+            <div class="detail-row"><span class="detail-icon"><i data-lucide="code-2"></i></span><div><p class="detail-label">常用工具</p><h3>Python / SQL</h3><p>Google Apps Script</p></div></div>
+          </div>
         </div>
       </div>
     </section>
-
-    <section id="contact" class="section" aria-labelledby="contact-title">
-      <div class="section-label"><span>04</span><h2 id="contact-title">保持聯絡</h2></div>
-      <div class="section-content">
-        <p>歡迎到 GitHub 看看我最近在做什麼。</p>
-        <a class="text-link" href="https://github.com/datasciencefreshman2000" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">&nearr;</span></a>
+    <section id="experience" class="experience band">
+      <div class="wrap experience-grid">
+        <div class="experience-heading reveal"><p class="eyebrow light"><span>02</span> EXPERIENCE</p><h2>不同的場景，<br>同樣的好奇心。</h2><p>從實習到教學，在不同角色中<br>累積解決問題的經驗。</p><a class="text-link on-dark" href="#projects">看看專案 <i data-lucide="arrow-down-right"></i></a></div>
+        <div class="timeline">
+          <article class="timeline-item reveal"><span class="timeline-dot" aria-hidden="true"></span><p class="eyebrow">AI & DEVELOPMENT</p><h3>AI 工程實習</h3><p>曾於研華科技擔任 AI 工程實習生，並有宇統資訊的 AI 工程實習經驗，參與 AI Agent 與資料分析相關開發。</p><div class="mini-tags"><span>研華科技</span><span>宇統資訊</span></div></article>
+          <article class="timeline-item reveal"><span class="timeline-dot" aria-hidden="true"></span><p class="eyebrow">TEACHING & SHARING</p><h3>程式教學與活動帶領</h3><p>曾教授 Python、資料分析與自動化課程，並參與東吳大學 STEAM 教育團隊的營隊與工作坊。</p></article>
+          <article class="timeline-item reveal"><span class="timeline-dot" aria-hidden="true"></span><p class="eyebrow">RESEARCH & EXPLORATION</p><h3>資料與社會網絡研究</h3><p>曾參與青少年同儕與社會網絡相關研究，探索資料分析在研究中的應用。</p></article>
+        </div>
       </div>
+    </section>
+    <section id="projects" class="projects band">
+      <div class="wrap">
+        <div class="section-top reveal"><p class="eyebrow"><span>03</span> SELECTED PROJECTS</p><span class="section-aside">一些做過的嘗試</span></div>
+        <div class="section-heading reveal"><h2>從問題開始的專案。</h2><p class="muted">用技術回應實際需求，一步一步累積。</p></div>
+        <div class="project-grid">
+          <article class="project-card reveal">
+            <div class="project-visual quickscore" aria-label="QuickScore 專案標誌"><span class="project-index">PROJECT / 01</span><div class="quickscore-mark"><span class="qs-symbol" aria-hidden="true">Q.</span><strong>QuickScore</strong><span>法律申論題 / 輔助批改</span></div><div class="visual-foot"><span>LLM + RAG</span><i data-lucide="sparkles"></i></div></div>
+            <div class="project-body"><div class="project-category">AI 應用 / 共同創辦與開發</div><h3>QuickScore</h3><p>參與共同創辦與開發法律申論題批改系統，嘗試將大型語言模型與檢索增強生成技術用於輔助批改。</p><div class="tags"><span>LLM</span><span>RAG</span><span>教育應用</span></div></div>
+          </article>
+          <article class="project-card reveal">
+            <div class="project-visual club-visual"><img src="assets/club.jpg" alt="蔡加恩在東吳調酒社活動中示範調酒" width="1108" height="1477" loading="lazy"><span class="project-index">PROJECT / 02</span></div>
+            <div class="project-body"><div class="project-category">流程自動化 / 社團營運</div><h3>社團流程自動化</h3><p>在東吳調酒社的營運中，運用 Google Apps Script 協助處理財務、活動報名與資料整理。</p><div class="tags"><span>Apps Script</span><span>資料整理</span><span>社團實務</span></div></div>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section id="moments" class="moments band">
+      <div class="wrap">
+        <div class="section-top reveal"><p class="eyebrow"><span>04</span> LIFE IN FRAMES</p><span class="section-aside">工作之外，也有生活。</span></div>
+        <div class="section-heading reveal"><h2>不只在螢幕前。</h2><p class="muted">教學、社團，還有吧台前的小小專注。</p></div>
+        <div class="gallery reveal" role="region" aria-roledescription="輪播" aria-label="生活照片">
+          <div class="gallery-stage">
+            <button class="photo-open" type="button" aria-label="放大目前照片" title="放大照片"><img id="gallery-photo" src="assets/bartending.jpg" alt="蔡加恩在吧台前調酒" width="1108" height="1477" loading="lazy"><span class="zoom-hint"><i data-lucide="expand"></i></span></button>
+            <div class="gallery-caption"><div><p class="eyebrow" id="gallery-category">OFF THE SCREEN</p><h3 id="gallery-title">吧台前的專注</h3><p id="gallery-description">調酒，也是觀察與練習的過程。</p></div><span class="gallery-count"><span id="gallery-current">01</span> / 03</span></div>
+          </div>
+          <div class="gallery-bottom">
+            <div class="gallery-thumbnails" aria-label="選擇照片">
+              <button class="thumbnail active" data-slide="0" aria-label="第 1 張：吧台前的專注" aria-pressed="true"><img src="assets/bartending.jpg" alt="" loading="lazy"><span>調酒</span></button>
+              <button class="thumbnail" data-slide="1" aria-label="第 2 張：一起學習的時刻" aria-pressed="false"><img src="assets/work.jpg" alt="" loading="lazy"><span>教學</span></button>
+              <button class="thumbnail" data-slide="2" aria-label="第 3 張：社團裡的交流" aria-pressed="false"><img src="assets/club.jpg" alt="" loading="lazy"><span>社團</span></button>
+            </div>
+            <div class="gallery-controls"><button class="icon-button" id="gallery-prev" aria-label="上一張照片" title="上一張"><i data-lucide="arrow-left"></i></button><button class="icon-button" id="gallery-play" aria-label="暫停自動輪播" title="暫停自動輪播"><i data-lucide="pause"></i></button><button class="icon-button" id="gallery-next" aria-label="下一張照片" title="下一張"><i data-lucide="arrow-right"></i></button></div>
+          </div>
+          <p class="sr-only" id="gallery-announcement" aria-live="polite"></p>
+        </div>
+      </div>
+    </section>
+    <section id="notes" class="closing band">
+      <div class="wrap closing-inner reveal"><div><p class="eyebrow"><span>05</span> TO BE CONTINUED</p><h2>下一段，<br>持續更新。</h2><p>把新的學習、實作與生活，慢慢記錄在這裡。</p></div><a class="closing-link" href="#home"><span>回到開頭</span><i data-lucide="arrow-up"></i></a></div>
     </section>
   </main>
-
-  <footer><span>&copy; 2026 蔡加恩</span><span>持續學習，慢慢累積。</span></footer>
+  <footer><div class="wrap footer-inner"><a href="#home">蔡加恩 <span class="brand-dot" aria-hidden="true"></span></a><span>學習、實作與生活。</span><span>&copy; 2026 蔡加恩</span></div></footer>
+  <a class="back-top icon-button" href="#home" aria-label="回到頂端" title="回到頂端"><i data-lucide="arrow-up"></i></a>
+  <dialog id="photo-dialog" aria-label="照片檢視"><button class="icon-button dialog-close" aria-label="關閉照片" title="關閉"><i data-lucide="x"></i></button><img id="dialog-photo" src="assets/bartending.jpg" alt="蔡加恩在吧台前調酒"><p id="dialog-caption">吧台前的專注</p></dialog>
 </body>
 </html>

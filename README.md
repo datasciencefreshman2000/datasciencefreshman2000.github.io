@@ -1,11 +1,13 @@
 # Personal website
 
-A simple, spacious personal page for GitHub Pages.
+A photo-led personal page for GitHub Pages, with responsive navigation, experience highlights, and a photo gallery.
 
 ## Edit
 
 - `index.html`: introduction, interests, projects, and links.
 - `style.css`: colors, spacing, and responsive layout.
+- `script.js`: navigation, scroll effects, gallery controls, and photo viewer.
+- `assets/`: original photos from Lab1 and the local Lucide icon library (ISC license).
 
 Open `index.html` directly in a browser to preview. No installation or build is required.
 
